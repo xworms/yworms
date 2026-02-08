@@ -1,0 +1,242 @@
+@font-face {
+  font-family: 'Frutiger';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Frutiger'), url('fonts/Frutiger.woff') format('woff');
+}
+@font-face {
+  font-family: 'Frutiger Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Frutiger Bold'), url('fonts/Frutiger_bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Neue Haas Display Light';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/NeueHaasDisplayLight.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Neue Haas Display Thin';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/NeueHaasDisplayThin.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'WingDings';
+  src: url('fonts/wingding.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Play With Fire';
+  src: url('fonts/Play With Fire.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes loadingAnimation {
+  from { filter: opacity(0%); }
+  to { filter: opacity(100%); }
+}
+@keyframes shine {
+  0% { border-image: linear-gradient(to bottom, #dffcd8 0%, #55924d 100%) 1 }
+  15% { border-image: linear-gradient(to bottom, #dffcd8 0%, #55924d 94%) 1 }
+  30% { border-image: linear-gradient(to bottom, #dffcd8 0%, #55924d 88%) 1 }
+  45% { border-image: linear-gradient(to bottom, #dffcd8 0%, #55924d 82%) 1 }
+  60% { border-image: linear-gradient(to bottom, #dffcd8 0%, #55924d 76%) 1 }
+  75% { border-image: linear-gradient(to bottom, #dffcd8 0%, #55924d 70%) 1 }
+  90% { border-image: linear-gradient(to bottom, #dffcd8 0%, #55924d 64%) 1 }
+  100% { border-image: linear-gradient(to bottom, #dffcd8 0%, #55924d 58%) 1 }
+}
+@keyframes shine-body {
+  0% { backdrop-filter: blur(1px) }
+  100% { backdrop-filter: blur(4px); }
+}
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+@keyframes zoom {
+  from { zoom: 100%; }
+  to { zoom: 90%; }
+}
+
+.generatedWorm {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 45px;
+  filter: drop-shadow(2px 2px 3px #000) invert(42%) sepia(200%) saturate(1000%) hue-rotate(60deg) brightness(150%) contrast(100%);
+}
+html {
+  height: 100%;
+  animation-name: loadingAnimation;
+  animation-duration: 3s;
+  cursor: none;
+}
+body {
+  font-family: 'Neue Haas Display Light', sans-serif;
+  background-color: white;
+  background-image: url('worms-green.png');
+}
+.big-div {
+  width: 1000px;
+  height: 100%;
+  margin: auto;
+  padding: 20px;
+  background: linear-gradient(45deg, rgba(189, 250, 48, 0.6) 0%,rgba(107, 165, 0, 0.1) 100%);
+  border: 1px solid;
+  border-image: linear-gradient(to bottom, #dffcd8 0%, #355c30 100%) 1;
+  box-shadow: #000d 0px 0px 10px 2px;
+  backdrop-filter: blur(3px);
+  animation-name: shine-body;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.div-aero {
+  /* background: linear-gradient(to bottom, rgba(184,225,252,1) 0%,rgba(169,210,243,1) 10%,rgba(144,186,228,1) 25%,rgba(144,188,234,1) 37%,rgba(144,191,240,1) 50%,rgba(107,168,229,1) 51%,rgba(162,218,245,1) 83%,rgba(189,243,253,1) 100%); */
+  background: linear-gradient(to bottom, rgba(191,210,85,1) 0%,rgba(142,185,42,1) 50%,rgba(114,170,0,1) 51%,rgba(158,203,45,1) 100%);
+  backdrop-filter: blur(3px);
+  font-family: 'Neue Haas Display Thin', sans-serif;
+  border: 1px solid;
+  border-image: linear-gradient(to bottom, #dffcd8 0%, #55924d 100%) 1;
+  box-shadow: #000b 0px 2px 5px -3px;
+  margin-bottom: 5px;
+  text-shadow: 0px 0px 10px #000a;
+  animation-name: shine;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transition: 0.3s;
+}
+.div-aero:hover {
+  box-shadow: #484d 0px 2px 5px 0px;
+}
+.time-and-date {
+  color: white;
+  display: flex;
+}
+p {
+  margin-bottom: 10px;
+}
+e {
+  text-shadow: 0px 0px 1px #000a;
+}
+a {
+  text-decoration: none;
+  color: white !important;
+  padding: 8px 12px;
+  background: linear-gradient(to bottom, rgba(191,210,85,1) 0%,rgba(142,185,42,1) 50%,rgba(114,170,0,1) 51%,rgba(158,203,45,1) 100%);
+  border: 1px solid;
+  border-image: linear-gradient(to bottom, #dffcd8 0%, #55924d 100%) 1;
+  animation-name: shine;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transition: ease-in-out 100ms;
+  user-select: none;
+  box-shadow: #000b 0px 2px 5px -4px;
+}
+a:hover {
+  filter: brightness(120%) contrast(85%);
+  cursor: none;
+  box-shadow: #484d 0px 2px 5px 0px;
+}
+a:active {
+  background: linear-gradient(to bottom, rgba(158,203,45,1) 0%, rgba(114,170,0,1) 50%, rgba(142,185,42,1) 51%, rgba(191,210,85,1) 100%);
+}
+/* .cursor {
+  position: fixed;
+  left: calc(50% - 50vw - 10px);
+  top: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: #8b4ef5;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: #aa79ff 0px 0px 15px 3px;
+  z-index: 99;
+} */
+#cursor1 {
+  filter: blur(2px);
+}
+.cursor {
+  position: fixed;
+  left: 0vw;
+  top: 0vh;
+  transition-duration: 0.1s;
+  filter: blur(5px);
+  stroke: #0000;
+  stroke-width: 0;
+}
+#svg {
+  position: absolute;
+  left: 0vw;
+  top: 0vh;
+  width: 100%;
+  height: 100%;
+  transition-duration: 0.1s;
+}
+img {
+  width: 100%;
+}
+.image {
+  border: 1px solid;
+  border-image: linear-gradient(to bottom, #dffcd8 0%, #55924d 100%) 1;
+  box-shadow: #000b 0px 2px 5px -3px;
+}
+.mt-4 {
+  margin-bottom: 1.5rem !important;
+}
+.pop-up {
+  padding: 5px;
+  border: 1px solid black;
+  background: linear-gradient(to bottom, rgba(191,210,85,0.8) 0%,rgba(142,185,42,1) 50%,rgba(114,170,0,1) 51%,rgba(158,203,45,0.7) 100%);
+  backdrop-filter: blur(3px);
+  color: white;
+  display: none;
+  width: 400px;
+  height: 480px;
+}
+.x {
+  position: absolute;
+  right: 6px;
+  top: 5px;
+  text-align: center;
+  height: 25px;
+  width: 50px;
+  padding: 0px;
+}
+
+#worm-game {
+  width: 614px;
+  height: 444px;
+}
+#worm-game-canvas {
+  position: absolute;
+  top: 35px;
+}
+#marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  flex: 1;
+}
+#marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll 10s linear infinite;
+  position: relative;
+  top: 3px;
+}
+#my-links .col-sm-4 {
+  position: absolute;
+}
+#my-links .col-sm-4 .image {
+  margin-bottom: 10px;
+  width: calc(300% - 10px);
+}
+/* #my-links .first {
+  position: relative;
+} */

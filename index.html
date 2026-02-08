@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>worm</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="big-div">
+
+<div class="div-aero container-fluid p-4 bg-primary text-white text-center">
+  <h1>The Worm.</h1>
+  <p id="innovation" onClick="innovate()">Worms. Reimagined.</p>
+  <div class="container">
+    <a href="">home</a>
+    <a onclick="wormGenerator()">worm generator</a>
+    <a onclick="changeColor()">change color</a>
+    <a onclick="changeFont()">change font</a>
+    <a onclick="partyMode()">party mode</a>
+  </div>
+</div>
+
+<div class="div-aero container-fluid time-and-date">
+  <span class="align-middle" id="time-and-date">12:48 wednesday</span>
+</div>
+
+<div class="div-aero container-fluid time-and-date">
+  <div id="marquee">
+    <span id="marquee-text">Aardvark related incidents are on the rise for unknown reasons.</span>
+  </div>
+  <h3 style="margin:0;height:31px;padding-left:10px">BREAKING NEWS.</h3>
+</div>
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-sm-4" style="position:relative">
+      <h3>Links.</h3>
+      <a onclick="myLinks()">my links.</a>
+      <a href="xworms/index.html">old inferior wormsite.</a>
+      <a href="https://soundcloud.com/ikkura">music.</a>
+      <a href="https://osu.ppy.sh/u/worm">osu.</a>
+    </div>
+    <div class="col-sm-4" style="position:relative">
+      <h3>Glooble Worm 4 HD.</h3>
+      <p>Click to play the worm game.</p>
+      <p>(currently wor<s>k</s>m in progress)</p>
+      <a onclick="wormGame()">play.</a>
+    </div>
+    <div class="col-sm-4" style="position:relative">
+      <h3>Worm 3D.</h3>
+      <p>It's a three dimensional worm!</p>
+      <a href="/worm3d/">wow.</a>
+    </div>
+  </div>
+  <div class="row">
+    <h3>My Favourite Fish.</h3>
+    <a href="https://en.wikipedia.org/wiki/Boops_boops">Boops boops</a>
+    <a href="https://en.wikipedia.org/wiki/Wahoo">Wahoo</a>
+    <a href="https://en.wikipedia.org/wiki/Common_roach">Common roach</a>
+    <a href="https://en.wikipedia.org/wiki/Urechis_unicinctus">Urechis unicinctus</a>
+    <a href="https://en.wikipedia.org/wiki/Candiru_(fish)#Alleged_attacks_on_humans"">Candiru (fish)</a>
+    <a href="https://en.m.wikipedia.org/wiki/Bony-eared_assfish">Bony-eared assfish</a>
+    <a href="https://en.m.wikipedia.org/wiki/Northern_hogsucker">Northern hogsucker</a>
+    <a href="https://en.m.wikipedia.org/wiki/Slippery_dick">Slippery dick</a>
+    <a href="https://en.m.wikipedia.org/wiki/Pacific_spiny_lumpsucker">Pacific spiny lumpsucker</a>
+    <a href="https://en.wikipedia.org/wiki/Chinaman-leatherjacket">Chinaman-leatherjacket</a>
+    <a href="https://en.m.wikipedia.org/wiki/Sacabambaspis">Sacabambaspis</a>
+    <a href="https://en.m.wikipedia.org/wiki/Reef_triggerfish">Reef triggerfish</a>
+    <a href="https://en.m.wikipedia.org/wiki/Skeleton_panda_sea_squirt">Skeleton panda sea squirt</a>
+    <a href="https://en.wikipedia.org/wiki/Hogchoker">Hogchoker</a>
+    <a href="https://en.m.wikipedia.org/wiki/Black_swallower">Black swallower</a>
+    <a href="https://en.wikipedia.org/wiki/Aeoliscus_strigatus">Aeoliscus strigatus</a>
+  </div>
+</div>
+
+<div id="worm-game" class="div-aero pop-up position-fixed start-50 top-50 translate-middle">
+  <p>worm game real</p>
+  <a onclick="hide('worm-game')" class="x">x</a>
+  <canvas id="worm-game-canvas" width="601px" height="401px"></canvas>
+</div>
+
+<div id="my-links" class="div-aero pop-up position-fixed start-50 top-50 translate-middle">
+  <div class="col-sm-4" style="visibility:hidden">
+    <p>My Links</p>
+    <a onclick="linksExit()" class="x">x</a>
+    <div class="image"><img src="my-links.jpg"></div>
+    <a onclick="myLinks()">my lynx</a>
+  </div>
+  <div class="col-sm-4" style="visibility:hidden">
+    <p>My Lynx</p>
+    <a onclick="linksExit()" class="x">x</a>
+    <div class="image"><img src="my-lynx.jpg"></div>
+    <a onclick="myLinks()">my lint</a>
+  </div>
+  <div class="col-sm-4" style="visibility:hidden">
+    <p>My Lint</p>
+    <a onclick="linksExit()" class="x">x</a>
+    <div class="image"><img src="my-lint.jpg"></div>
+    <a onclick="myLinks()">my linux</a>
+  </div>
+  <div class="col-sm-4" style="visibility:hidden">
+    <p>My Linux</p>
+    <a onclick="linksExit()" class="x">x</a>
+    <div class="image"><img src="my-linux.png"></div>
+    <a onclick="myLinks()">my links</a>
+  </div>
+</div>
+
+</div>
+
+<svg id="svg">
+  <circle class="cursor" id="cursor1" r="12px" fill="#393"></circle>
+  <circle class="cursor" id="cursor2" r="8px" fill="#3c3"></circle>
+  <circle class="cursor" id="cursor3" r="5px" fill="#393"></circle>
+  <circle class="cursor" id="cursor4" r="5px" fill="#3c3"></circle>
+  <circle class="cursor" id="cursor5" r="5px" fill="#393"></circle>
+</svg>
+
+</body>
+
+<script src="script.js"></script>
+<script src="worm-game.js"></script>
+<script type="application/javascript" src="http://ipinfo.io/?format=jsonp&callback=getIP"></script>
+
+</html>

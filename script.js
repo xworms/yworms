@@ -241,7 +241,7 @@ ipReady.then(ip => {
 const headlines = [
     "Aardvark related incidents are on the rise for unknown reasons.",
     "President Oolun Bongir of Bajookistan passed away at age 205.",
-    "Look behind you.",
+    "I'm always watching.",
     null,
     "Garpfeldt Porler Jr becomes first man to successfully frug a ding-worb using only a dungle.",
     "New research suggests that humans could be extinct by 2015.",
@@ -266,11 +266,18 @@ function updateText() {
 
 let innovation = 0
 function innovate() {
+    document.getElementById("innovation").animate([
+        { filter: "opacity(0%)" },
+        { filter: "opacity(100%)" }
+    ], {
+        duration: 200
+    })
     innovation = (innovation + 1) % innovations.length
     document.getElementById("innovation").innerHTML = innovations[innovation]
 }
 
 setInterval(updateText, 10000)
+setInterval(innovate, 5000)
 
 let linksIndex = 0
 function myLinks() {

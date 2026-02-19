@@ -126,6 +126,17 @@ function partyMode() {
     },50)
 }
 
+function speen() {
+    if (Math.floor(Math.random() * 11) == 0) {
+        document.documentElement.style = "animation-name:speen;animation-duration:60s;"
+        setTimeout(function () {document.documentElement.style = "animation-name:none"}, 60000)
+    }
+    else {
+        document.documentElement.style = "animation-name:speen;animation-duration:2s;"
+        setTimeout(function () {document.documentElement.style = "animation-name:none"}, 2000)
+    }
+}
+
 function updateTimeAndDate() {
     var d = new Date()
     var h = d.getHours()
@@ -200,26 +211,19 @@ const moveCursor = (e) => {
 
     let wx = window.innerWidth;
     let wy = window.innerHeight;
-    let s = window.scrollY;
-
-    let ys = y+s;
     
-    cursor1.style.transform = "translate("+x+"px,"+ys+"px)";
+    cursor1.style.transform = "translate("+x+"px,"+y+"px)";
     setTimeout(function(){
-        let ys = y+s;
-        cursor2.style.transform = `translate3d(${x}px, ${ys}px, 0)`
+        cursor2.style.transform = `translate3d(${x}px, ${y}px, 0)`
     },20)
     setTimeout(function(){
-        let ys = y+s;
-        cursor3.style.transform = `translate3d(${x}px, ${ys}px, 0)`
+        cursor3.style.transform = `translate3d(${x}px, ${y}px, 0)`
     },150);
     setTimeout(function(){
-        let ys = y+s;
-        cursor4.style.transform = `translate3d(${x}px, ${ys}px, 0)`
+        cursor4.style.transform = `translate3d(${x}px, ${y}px, 0)`
     },250);
     setTimeout(function(){
-        let ys = y+s;
-        cursor5.style.transform = `translate3d(${x}px, ${ys}px, 0)`
+        cursor5.style.transform = `translate3d(${x}px, ${y}px, 0)`
     },350);
 }
 
@@ -290,7 +294,6 @@ function myLinks() {
             link.style = "visibility: hidden"
         }
     }
-    console.log(linksIndex)
     if (linksIndex == 4) { hide('my-links') }
     linksIndex = (linksIndex + 1) % 5
 }

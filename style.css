@@ -35,7 +35,7 @@
   font-style: normal;
 }
 
-@keyframes loadingAnimation {
+@keyframes flashbang {
   from { filter: opacity(0%); }
   to { filter: opacity(100%); }
 }
@@ -61,6 +61,10 @@
   from { zoom: 100%; }
   to { zoom: 90%; }
 }
+@keyframes speen {
+  from { rotate: 0deg; }
+  to { rotate: 360deg; }
+}
 
 .generatedWorm {
   position: fixed;
@@ -71,7 +75,7 @@
 }
 html {
   height: 100%;
-  animation-name: loadingAnimation;
+  animation-name: flashbang;
   animation-duration: 3s;
   cursor: none;
 }
@@ -139,6 +143,7 @@ a {
   user-select: none;
   box-shadow: #000b 0px 2px 5px -4px;
   cursor: none;
+  line-height: initial;
 }
 a:hover {
   filter: brightness(120%) contrast(85%);
@@ -148,18 +153,6 @@ a:hover {
 a:active {
   background: linear-gradient(to bottom, rgba(158,203,45,1) 0%, rgba(114,170,0,1) 50%, rgba(142,185,42,1) 51%, rgba(191,210,85,1) 100%);
 }
-/* .cursor {
-  position: fixed;
-  left: calc(50% - 50vw - 10px);
-  top: -10px;
-  width: 20px;
-  height: 20px;
-  background-color: #8b4ef5;
-  border-radius: 50%;
-  pointer-events: none;
-  box-shadow: #aa79ff 0px 0px 15px 3px;
-  z-index: 99;
-} */
 #cursor1 {
   filter: blur(2px);
 }
@@ -173,7 +166,7 @@ a:active {
   stroke-width: 0;
 }
 #svg {
-  position: absolute;
+  position: fixed;
   left: 0vw;
   top: 0vh;
   width: 100%;
@@ -205,7 +198,7 @@ img {
 }
 .x {
   position: absolute;
-  right: 6px;
+  right: 4px;
   top: 5px;
   text-align: center;
   height: 25px;
@@ -214,7 +207,7 @@ img {
 }
 
 #worm-game {
-  width: 614px;
+  width: 612px;
   height: 444px;
 }
 #worm-game-canvas {
@@ -235,10 +228,18 @@ img {
 }
 #my-links .col-sm-4 {
   position: absolute;
+  width: calc(100% - 10px);
 }
 #my-links .col-sm-4 .image {
   margin-bottom: 10px;
-  width: calc(300% - 10px);
+  width: 100%
+}
+.col-sm-4 a {
+  display: block;
+  margin-bottom: 4px;
+}
+.row {
+  margin-bottom: 40px;
 }
 /* #my-links .first {
   position: relative;

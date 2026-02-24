@@ -82,7 +82,7 @@ html {
 body {
   font-family: 'Neue Haas Display Light', sans-serif;
   background-color: white;
-  background-image: url('worms-green.png');
+  background-image: url('/static/images/worms-green.png');
 }
 .big-div {
   width: 1000px;

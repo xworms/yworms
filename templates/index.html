@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <link href="style.css" rel="stylesheet">
+  <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
 </head>
 <body>
 
@@ -105,35 +105,37 @@
   <div class="col-sm-4" style="visibility:hidden">
     <p>My Links</p>
     <a onclick="linksExit()" class="x">x</a>
-    <div class="image"><img src="my-links.jpg"></div>
+    <div class="image"><img src="/static/images/my-links.jpg"></div>
     <a onclick="myLinks()">my lynx</a>
   </div>
   <div class="col-sm-4" style="visibility:hidden">
     <p>My Lynx</p>
     <a onclick="linksExit()" class="x">x</a>
-    <div class="image"><img src="my-lynx.jpg"></div>
+    <div class="image"><img src="/static/images/my-lynx.jpg"></div>
     <a onclick="myLinks()">my lint</a>
   </div>
   <div class="col-sm-4" style="visibility:hidden">
     <p>My Lint</p>
     <a onclick="linksExit()" class="x">x</a>
-    <div class="image"><img src="my-lint.jpg"></div>
+    <div class="image"><img src="/static/images/my-lint.jpg"></div>
     <a onclick="myLinks()">my linux</a>
   </div>
   <div class="col-sm-4" style="visibility:hidden">
     <p>My Linux</p>
     <a onclick="linksExit()" class="x">x</a>
-    <div class="image"><img src="my-linux.png"></div>
+    <div class="image"><img src="/static/images/my-linux.png"></div>
     <a onclick="myLinks()">my links</a>
   </div>
 </div>
+
+<div><center>mhca</center></div>
 
 </div>
 
 </body>
 
-<script src="script.js"></script>
-<script src="worm-game.js"></script>
+<script src="/static/script.js"></script>
+<script src="/static/worm-game.js"></script>
 <script type="application/javascript" src="http://ipinfo.io/?format=jsonp&callback=getIP"></script>
 
 </html>

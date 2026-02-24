@@ -39,7 +39,7 @@ def users_list():
 def user_create():
     if request.method == "POST":
         user = User(
-            title=request.form["username"],                      # type: ignore
+            username=request.form["username"],                        # type: ignore
             # password=request.form["password"],                      # type: ignore
         )
         db.session.add(user)

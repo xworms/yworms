@@ -28,7 +28,8 @@ with app.app_context():
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    posts = db.session.execute(db.select(Post).order_by(Post.id)).scalars()
+    return render_template("index.html", posts=posts)
 
 @app.route("/users")
 def users_list():

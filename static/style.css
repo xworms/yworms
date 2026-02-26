@@ -80,12 +80,12 @@ html {
   cursor: none;
 }
 body {
-  font-family: 'Neue Haas Display Light', sans-serif;
+  font-family: 'Frutiger', 'Neue Haas Display Light', sans-serif;
   background-color: white;
   background-image: url('/static/images/worms-green.png');
 }
 .big-div {
-  width: 1000px;
+  max-width: 1000px;
   height: 100%;
   margin: auto;
   padding: 20px;
@@ -144,6 +144,7 @@ a {
   box-shadow: #000b 0px 2px 5px -4px;
   cursor: none;
   line-height: initial;
+  font-family: 'Frutiger', sans-serif;
 }
 a:hover {
   filter: brightness(120%) contrast(85%);
@@ -225,6 +226,7 @@ img {
   animation: scroll 10s linear infinite;
   position: relative;
   top: 3px;
+  font-family: 'Frutiger';
 }
 #my-links .col-sm-4 {
   position: absolute;
